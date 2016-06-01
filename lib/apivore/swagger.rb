@@ -21,7 +21,7 @@ module Apivore
     end
 
     def base_path
-      self['basePath'] || ''
+      "http://#{self["host"] + self["basePath"]}" || ''
     end
 
     def each_response(&block)
